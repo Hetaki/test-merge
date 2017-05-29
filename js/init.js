@@ -5,12 +5,6 @@ var SHIRTS = {
     image: 'long-shirt-mask.png',
     colors: ['red', 'blue', 'green'],
   },
-  'img02': {
-    name: 'Polera',
-    price: 45,
-    image: 'polera-mask.png',
-    colors: ['blue', 'gray', 'purple']
-  },
   'img03': {
     name: 'Polo para niño',
     price: 110,

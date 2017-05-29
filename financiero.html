@@ -4,6 +4,30 @@
   <meta charset="UTF-8">
   <title>Drag and drop</title>
   <link rel="stylesheet" href="css/semantic.css">
+  <style type="text/css">
+    .bg-colors {
+      width: 23px;
+      height: 23px;
+      float: left;
+      cursor: pointer;
+    }
+    .selected {
+      -webkit-border-radius: 50%!important;
+      border-radius: 50%!important;
+    }
+    .design-area {
+      border: 1px dashed #666;
+      position: absolute;
+      width: 200px; 
+      height: 350px; 
+      position: absolute;
+    }
+    #mask-content {
+      position: relative;
+      float: left;
+    }
+
+  </style>
 </head>
 <body>
   <div class="ui grid container" style="margin-top: 3em;">
