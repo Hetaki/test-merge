@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag and drop</title>
+  <link rel="stylesheet" href="css/semantic.css">
+  <style type="text/css">
+    .bg-colors {
+      width: 23px;
+      height: 23px;
+      float: left;
+      cursor: pointer;
+    }
+    .selected {
+      -webkit-border-radius: 50%!important;
+      border-radius: 50%!important;
+    }
+    .design-area {
+      border: 1px dashed #666;
+      position: absolute;
+      width: 200px; 
+      height: 350px; 
+      position: absolute;
+    }
+    #mask-content {
+      position: relative;
+      float: left;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="ui grid container" style="margin-top: 3em;">
+    <div class="ui three top attached steps">
+      <div class="active step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Design</div>
+        </div>
+      </div>
+      <div class="step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Pricing</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Launch</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui attached segment">
+      <div class="ui grid">
+        <div class="four wide column">
+          <div class="ui large vertical labeled icon menu">
+            <a class="item" id="pickProduct">
+              <i class="gamepad icon"></i>
+              Elegir productos
+            </a>
+            <a class="item" id="pickCreateText">
+              <i class="video camera icon"></i>
+              Agregar Texto
+            </a>
+            <a class="item" id="pickArtWork">
+              <i class="video play icon"></i>
+              Agregar imagen
+            </a>
+          </div>
+          <div class="ui segment layouts" style="display: none;">
+
+          </div>
+        </div>
+        <div class="eight wide centered column">
+          <div class="" id="mask-content">
+            
+          </div> 
+          <div class="design-area" style="top: 120px; left:128px;">
+            
+          </div>
+        </div>
+        <div class="four wide column">
+          <h5 class="ui top attached header">
+            Elegir color : 
+          </h5>
+          <div class="ui attached segment">
+            <div class="ui padded grid swatch">
+            </div>
+          </div>
+          <div class="ui attached segment">
+            <h5 class="ui header">Base costo : </h5>
+            <p class="money-total"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal productos -->
+  <div class="ui modal products">
+    <i class="close icon"></i>
+    <div class="header">
+      Escoga un producto
+    </div>
+    <div class="content">
+    </div>
+  </div>
+  <div class="ui modal mdl-create-text">
+    <i class="close icon"></i>
+    <div class="header">
+      Ingrese texto
+    </div>
+    <div class="content">
+      <div class="ui input">
+        <input type="text" id="txt-create-text" placeholder="Ingrese texto" value="Prueba Diseño!!!">
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui approve button">Agregar</div>
+    </div>
+  </div>
+  <!-- Modal logo -->
+  <div class="ui modal mdl-art-work">
+    <i class="close icon"></i>
+    <div class="header">
+      Agregar logo
+    </div>
+    <div class="content">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" ></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/semantic.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript">
+    Init();
+  </script>
+
+</body>
+</html>
